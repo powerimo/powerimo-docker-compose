@@ -19,6 +19,8 @@ services:
       - db
   web:
     image: powerimo/powerimo-secrets-web:qa
+    environment:
+      API_URL: http://api:8080
     ports:
       - '3000:80'
     depends_on:
